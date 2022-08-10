@@ -1,8 +1,17 @@
 import * as S from "./styled";
 
-const Button = () => {
+interface IButton {
+  onClick: () => void;
+  text: string,
+}
+
+const Button = ({ onClick, text }: IButton) => {
   return <>
-    <S.Container></S.Container>
+    <S.Container>
+      <button onClick={onClick}>
+        {text}
+        </button>
+    </S.Container>
   </>
 }
 

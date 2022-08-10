@@ -1,10 +1,10 @@
 import GlobalStyled from './globals/styles/globalStyled';
-import StepOne from './pages/StepOne';
+import Routers from './router/router';
 
 function App() {
   return <>
     <GlobalStyled />
-    <StepOne />
+    <Routers />
   </>
 }
 

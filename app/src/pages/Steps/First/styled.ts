@@ -1,5 +1,16 @@
-import styled from "styled-components";
-
+import styled, { keyframes } from "styled-components";
+const anime = keyframes`
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    35% {
+      transform: translateX(-15%);
+    }
+    70% {
+      transform: translateX(15%);
+    }
+  `
 export const Container = styled.div`
   padding: 10px;
 `
@@ -36,9 +47,23 @@ export const InputBox = styled.div`
     font-size: 2.6em;
     color: white;
     letter-spacing: 2px;
-
+    
     :focus {
       border-bottom: 1px solid #71ccf1; 
     }
+
+    .nono{    
+      animation: ${anime} 200ms linear;
+    }
   }
+`
+
+export const ButtonBox = styled.div`
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
 `

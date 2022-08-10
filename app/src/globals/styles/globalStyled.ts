@@ -1,18 +1,6 @@
 import { createGlobalStyle, keyframes } from "styled-components"
 
-
-const anime = keyframes`
-  from {
-    top: 0;
-  }
-  to{ 
-    bottom: 100%;
-  }
-`
-
 const GlobalStyled = createGlobalStyle`
-
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
   * {
     margin: 0;
