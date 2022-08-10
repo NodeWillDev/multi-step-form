@@ -1,8 +1,10 @@
-import React from 'react';
+import GlobalStyled from './globals/styles/globalStyled';
+import StepOne from './pages/StepOne';
 
 function App() {
   return <>
-    <h1>React</h1> 
+    <GlobalStyled />
+    <StepOne />
   </>
 }
 
