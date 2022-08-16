@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import IStyled from "./interfaces/IStyled";
 
-export const Container = styled.div<IStyled>`
-  display: flex;
-  align-items: center;
-  color: ${props => props.actived ? "#0affb0" : "white"};
+export const Container = styled.div<IStyled>`  
   width: 300px;
   max-width: 300px;  
   font-size: .7rem;
+
+  > a {
+    text-decoration: none;
+    color: ${props => props.actived ? "#0affb0" : "white"};
+    display: flex;
+    align-items: center;  
+  }
 `
 
 export const Icon = styled.div`
