@@ -2,7 +2,7 @@ import * as S from "./styled";
 import Theme from "../../../components/Theme";
 import Button from "../../../components/Button";
 
-const Third = () => {
+const Second = () => {
 
   function handleClick() {
     //TODO
@@ -23,4 +23,4 @@ const Third = () => {
   </>
 }
 
-export default Third;
+export default Second;

@@ -1,14 +1,12 @@
 import { createContext } from "react";
-import IUser from "../entities/IUser";
-
-type TypeFormAction = "setEmail" | "setName";
+import { IActions } from "./interfaces/IActions";
+import { IDate } from "./interfaces/IDate";
 
 interface IFormContext {
-  user: IUser,
-  action: TypeFormAction;
-  payload: string;
+  date: IDate,
+  dispatch: (action: IActions) => void
 }
 
-const FormContext = createContext<IFormContext>({} as IFormContext);
+const FormContext = createContext({} as IFormContext);
 
 export default FormContext;

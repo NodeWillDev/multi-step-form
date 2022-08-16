@@ -1,11 +1,22 @@
 import * as S from "./styled";
 import Theme from "../../../components/Theme";
 import Button from "../../../components/Button";
-import { useRef } from "react";
+import { ChangeEvent, useRef } from "react";
+import useForm from "../../../context/hook/useForm";
 
 const First = () => {
 
+  const { date } = useForm();
+
   const input_ref = useRef<HTMLInputElement>(null);
+
+  function onChange(e: ChangeEvent<HTMLInputElement>) {
+    // dispatch({
+    //   payload: e.target.value,
+    //   type: 'setName'
+    // });
+    console.log(date);
+  }
 
   function handleClick() {
     //TODO
@@ -23,7 +34,9 @@ const First = () => {
             <input
               ref={input_ref}
               placeholder="Your Name"
-              type="text" />
+              type="text" 
+              onChange={onChange}
+              />
           </S.InputBox>
         </S.Box>
         <S.ButtonBox>
