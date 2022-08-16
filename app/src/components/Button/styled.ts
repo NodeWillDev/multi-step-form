@@ -15,7 +15,7 @@ export const Container = styled.div`
 
     :hover {
       opacity: 1;
-      color: #0c6f00;
+      color: #b776fa;
       letter-spacing: 5px;
     }
   }

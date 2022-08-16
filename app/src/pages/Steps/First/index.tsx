@@ -14,10 +14,10 @@ const First = () => {
   return <>
     <Theme step={1} >
       <S.Container>
-        <h2>First step</h2>
+        <p>First step</p>
         <S.Box>
           <S.Description>
-            <p>Enter your name to start your CV.</p>
+            <h3>Enter your name to start your CV.</h3>
           </S.Description>
           <S.InputBox>
             <input

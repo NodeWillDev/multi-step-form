@@ -2,7 +2,7 @@ import Header from "../Header";
 import Step from "./components/Step";
 import ITheme from "./interfaces/ITheme";
 import * as S from "./styled";
-import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineMail, AiOutlineUser, AiFillBug } from "react-icons/ai";
 
 const Theme = ({ children, step }: ITheme) => {
   return <>
@@ -16,8 +16,8 @@ const Theme = ({ children, step }: ITheme) => {
           <div>
             <div>
               <Step
-                routerTo="step1"
-                actived={true}
+                routerTo="/first-step"
+                actived={step === 1}
                 description="For started, insert your name"
                 title="Your Name"
                 icon={<AiOutlineUser />}
@@ -25,11 +25,20 @@ const Theme = ({ children, step }: ITheme) => {
             </div>
             <div>
               <Step
-                routerTo="step2"
-                actived={false}
+                routerTo="/second-step"
+                actived={step === 2}
                 description="Please insert a email for contact"
                 title="Email Collect"
                 icon={<AiOutlineMail />}
+              />
+            </div>
+            <div>
+              <Step
+                routerTo="/third-step"
+                actived={step === 3}
+                description="End"
+                title="End Company"
+                icon={<AiFillBug />}
               />
             </div>
           </div>

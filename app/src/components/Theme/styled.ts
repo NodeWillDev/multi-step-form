@@ -4,10 +4,12 @@ export const Container = styled.div`
   width: 100%;
   max-width: 980px;
   margin: auto;
+  font-size: .98rem;  
 `
 
 export const Area = styled.div`
   display: grid;
+  padding: 10px; 
   grid-template-columns: 2fr 4fr;
   grid-template-areas: "header header"
                       "sidebar page";
