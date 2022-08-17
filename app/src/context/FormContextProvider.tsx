@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 import FormContext from "./FormContext";
-import { reducer } from "./FormReducer";
+import FormReducer from "./FormReducer";
 
 interface IFormContextProvider {
   children: ReactNode
 }
 
 const FormContextProvider = ({ children }: IFormContextProvider) => {
-  const [date, dispatch] = reducer;
+  const [date, dispatch] = FormReducer();
   return (
     <FormContext.Provider value={{ date, dispatch }} >
       {children}

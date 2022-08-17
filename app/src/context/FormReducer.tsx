@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import { IActions } from "./interfaces/IActions";
 import { IDate } from "./interfaces/IDate";
 
-export const reducer = useReducer((date: IDate, action: IActions) => {
+const FormReducer = () => useReducer((date: IDate, action: IActions) => {
 
   switch (action.type) {
     case 'setName':
@@ -18,4 +18,6 @@ export const reducer = useReducer((date: IDate, action: IActions) => {
   email: '',
   name: '',
   step: 1
-});
+} as IDate);
+
+export default FormReducer;
