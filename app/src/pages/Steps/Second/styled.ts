@@ -1,13 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-   font-size: .85em;
+  font-size: .85em;
 `
 
 export const Box = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  > p {
+    margin-top: 15px;
+    font-size: 2rem;
+
+    > span {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
 `
 
 export const Description = styled.div`
@@ -16,8 +26,12 @@ export const Description = styled.div`
   width: 100%;  
 
   > h3 {
-    opacity: .5;
+    font-weight: 100;
     font-size: 2em;
+    > span  {      
+    font-weight: bold;
+      font-size: 1.5em;
+    }
   }
 `
 

@@ -26,15 +26,12 @@ export const Sidebar = styled.div`
   position: relative;
   width: 350px;
   height: 500px;
-  margin-top: 5px;  
   grid-area: sidebar;    
   display: flex;
-  align-items: center;
-
+  align-items: center;  
   > div {            
     padding-top: 20px;
     padding-bottom: 20px;
-
     > div {
       margin-top: 25px;
       margin-bottom: 25px;
@@ -48,4 +45,5 @@ export const Page = styled.div`
   position: relative;
   grid-area: page;
   color: white;
+  padding: 25px;
 `
