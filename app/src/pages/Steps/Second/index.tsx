@@ -2,13 +2,19 @@ import * as S from "./styled";
 import Theme from "../../../components/Theme";
 import Button from "../../../components/Button";
 import { useNavigate } from "react-router-dom";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useEffect, useRef } from "react";
 import useForm from "../../../context/hook/useForm";
 
 const Second = () => {
 
   const navigate = useNavigate();
   const { date, dispatch } = useForm();
+  const input_ref = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!date.name)
+      navigate('/first-step');
+  }, []);
 
   function onChange(e: ChangeEvent<HTMLInputElement>) {
     dispatch({
@@ -16,8 +22,16 @@ const Second = () => {
       type: 'setEmail'
     });
   }
+
   function handleClick() {
-    //TODO
+    if (input_ref.current) {
+      if (!date.email) {
+        input_ref.current.style.borderBottom = "1px solid rgb(210 35 35)";
+      } else {
+        input_ref.current.style.borderBottom = "";
+        navigate('/third-step');
+      }
+    }
   }
 
   return <>
@@ -30,6 +44,7 @@ const Second = () => {
           </S.Description>
           <S.InputBox>
             <input
+              ref={input_ref}
               placeholder="Your Email For Contact"
               type="text"
               value={date.email}

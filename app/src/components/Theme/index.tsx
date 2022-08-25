@@ -2,7 +2,8 @@ import Header from "../Header";
 import Step from "./components/Step";
 import ITheme from "./interfaces/ITheme";
 import * as S from "./styled";
-import { AiOutlineMail, AiOutlineUser, AiFillBug } from "react-icons/ai";
+import { AiOutlineMail, AiOutlineUser, AiOutlineSortDescending} from "react-icons/ai";
+import { TbFileDescription } from "react-icons/tb";
 
 const Theme = ({ children, step }: ITheme) => {
   return <>
@@ -36,9 +37,18 @@ const Theme = ({ children, step }: ITheme) => {
               <Step
                 routerTo="/third-step"
                 actived={step === 3}
-                description="End"
-                title="End Company"
-                icon={<AiFillBug />}
+                description="Make a prev description yourself"
+                title="Describe You"
+                icon={<TbFileDescription />}
+              />
+            </div>
+            <div>
+              <Step
+                routerTo="/finished"
+                actived={step === 'finished'}
+                description="Your registration has been completed and sent to us with the following information"
+                title="Finished"
+                icon={<AiOutlineSortDescending />}
               />
             </div>
           </div>

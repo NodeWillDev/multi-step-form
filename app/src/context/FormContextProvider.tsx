@@ -7,7 +7,9 @@ interface IFormContextProvider {
 }
 
 const FormContextProvider = ({ children }: IFormContextProvider) => {
+  
   const [date, dispatch] = FormReducer();
+
   return (
     <FormContext.Provider value={{ date, dispatch }} >
       {children}

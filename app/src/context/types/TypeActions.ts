@@ -1,3 +1,4 @@
 export type TypeActions = 'setName'
   | 'setEmail'
-  | 'setStep';
+  | 'setStep'
+  | 'setDescription';

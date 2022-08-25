@@ -10,13 +10,16 @@ const FormReducer = () => useReducer((date: IDate, action: IActions) => {
     case 'setEmail':
       return { ...date, email: action.payload };
     case 'setStep':
-      return { ...date, step: action.payload }
+      return { ...date, step: action.payload };
+      case 'setDescription':
+      return { ...date, description: action.payload }
     default:
       return date;
   }
 }, {
   email: '',
   name: '',
+  description: '',
   step: 1
 } as IDate);
 

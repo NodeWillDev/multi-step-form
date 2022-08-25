@@ -12,7 +12,6 @@ const GlobalStyled = createGlobalStyle`
     font-size: 62.5%;
     background-color: #4f05b5;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
   }
 `;
 
