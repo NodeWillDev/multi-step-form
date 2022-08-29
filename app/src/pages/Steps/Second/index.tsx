@@ -10,13 +10,15 @@ const Second = () => {
   const navigate = useNavigate();
   const { date, dispatch } = useForm();
   const input_ref = useRef<HTMLInputElement>(null);
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
   useEffect(() => {
     if (!date.name)
       navigate('/first-step');
-  }, []);
+  }, [date.name, navigate]);
 
   function onChange(e: ChangeEvent<HTMLInputElement>) {
+
     dispatch({
       payload: e.target.value,
       type: 'setEmail'
@@ -25,7 +27,7 @@ const Second = () => {
 
   function handleClick() {
     if (input_ref.current) {
-      if (!date.email) {
+      if (!date.email || !regex.test(date.email)) {
         input_ref.current.style.borderBottom = "1px solid rgb(210 35 35)";
       } else {
         input_ref.current.style.borderBottom = "";

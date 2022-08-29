@@ -19,8 +19,7 @@ const FormReducer = () => useReducer((date: IDate, action: IActions) => {
 }, {
   email: '',
   name: '',
-  description: '',
-  step: 1
+  description: ''
 } as IDate);
 
 export default FormReducer;

@@ -1,5 +1,4 @@
-export interface IDate {
-  step: number,
+export interface IDate {  
   name: string,
   email: string,
   description: string
